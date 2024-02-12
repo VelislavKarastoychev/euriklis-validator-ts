@@ -9,7 +9,7 @@
     "test": "ts-node ./bin/validator-cli.ts"
   },
   "bin": {
-    "validator": "node --loader=ts-node/esm bin/validator-cli.ts"
+    "validator": "dist/bin/validator-cli.js"
   },
   "keywords": [
     "validator",
