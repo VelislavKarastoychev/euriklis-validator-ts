@@ -1,0 +1,34 @@
+{
+  "name": "@euriklis/validator-ts",
+  "version": "4.2.1",
+  "description": "A javascript package for testing and managing of type coonditions.",
+  "main": "./dist/src/validator.js",
+  "scripts": {
+    "start": "ts-node ./src/validator.ts",
+    "build:validator": "tsc",
+    "test": "ts-node ./bin/validator-cli.ts"
+  },
+  "bin": {
+    "validator": "bin/validator-cli.ts"
+  },
+  "keywords": [
+    "validator",
+    "javascript",
+    "\"type",
+    "verification\"",
+    "\"conditional",
+    "type",
+    "manipulation\"",
+    "testing"
+  ],
+  "author": "Euriklis <euriklis@hotmail.com>",
+  "homepage": "https://github.com/VelislavKarastoychev/euriklis-validator#readme",
+  "dependencies": {
+    "@euriklis/message-ts": "^1.0.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16"
+  }
+}
