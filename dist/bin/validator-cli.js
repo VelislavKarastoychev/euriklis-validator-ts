@@ -31,7 +31,7 @@ const message_ts_1 = __importDefault(require("@euriklis/message-ts"));
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const args = process.argv.slice(2);
-const dirname = args[0] || "dist/Tests";
+const dirname = args[0] || "Tests";
 const testsFolder = path_1.default.join(process.cwd(), dirname);
 // Check if the "Tests" folder exists, otherwise try "tests"
 if (!fs_1.default.existsSync(testsFolder)) {
@@ -49,7 +49,7 @@ else
     console.log(testsFolder);
 // Find all test files ending with "spec.js" and run them using Node.js
 fs_1.default.readdirSync(testsFolder).forEach((file) => {
-    if (file.endsWith("spec.js")) {
+    if (file.endsWith("spec.ts")) {
         Promise.resolve(`${path_1.default.join(testsFolder, file)}`).then(s => __importStar(require(s))).catch((err) => {
             new message_ts_1.default()
                 .bold
