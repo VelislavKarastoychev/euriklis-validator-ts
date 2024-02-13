@@ -9,7 +9,7 @@
     "test": "rm -rdf dist && tsc && tsc-alias && ts-node ./dist/bin/validator-cli.js && rm -rdf dist/Tests"
   },
   "bin": {
-    "validator": "rm -rdf dist/Tests && tsc && tsc-alias && dist/bin/validator-cli.js && rm -rdf dist/Tests"
+    "validator": "bin/validator-cli.ts"
   },
   "keywords": [
     "validator",
