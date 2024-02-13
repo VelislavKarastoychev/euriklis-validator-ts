@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsObjectArray = void 0;
 /**
  * Checks if the "value" is an array of object elements.
  * Utility function for the isObjectArray method.
@@ -7,7 +9,7 @@
  * @returns {boolean} if the "value" is an array of object
  * elements returns true, otherwise false.
  */
-export const IsObjectArray = (value) => {
+const IsObjectArray = (value) => {
     const n = value.length;
     let i, j;
     for (i = 0; i < n >> 2; i++) {
@@ -31,3 +33,4 @@ export const IsObjectArray = (value) => {
     }
     return true;
 };
+exports.IsObjectArray = IsObjectArray;

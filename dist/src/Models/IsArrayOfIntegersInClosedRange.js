@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsArrayOfIntegersInClosedRange = void 0;
 /**
  * Checks if the "value" property is an array of integers, which lies
  * in the closed interval [a, b].
@@ -9,7 +11,7 @@
  * @param {number} b - the upper bound of the array elements.
  * @returns {boolean} if the "value" is integer array in the closed range [a, b], returns true, otherwise returns false.
  */
-export const IsArrayOfIntegersInClosedRange = (value, a, b) => {
+const IsArrayOfIntegersInClosedRange = (value, a, b) => {
     const n = value.length;
     let i, j;
     for (i = 0; i < n >> 2; i++) {
@@ -30,3 +32,4 @@ export const IsArrayOfIntegersInClosedRange = (value, a, b) => {
     }
     return true;
 };
+exports.IsArrayOfIntegersInClosedRange = IsArrayOfIntegersInClosedRange;

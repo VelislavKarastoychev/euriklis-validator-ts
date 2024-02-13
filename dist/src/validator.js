@@ -1,15 +1,43 @@
+"use strict";
 " use strict";
-import message from "@euriklis/message-ts";
-import * as errors from "./Errors/index.js";
-import * as warnings from "./Warnings/index.js";
-import * as models from "./Models/index.js";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const message_ts_1 = __importDefault(require("@euriklis/message-ts"));
+const errors = __importStar(require("./Errors/index.js"));
+const warnings = __importStar(require("./Warnings/index.js"));
+const models = __importStar(require("./Models/index.js"));
 /**
  * The `validator` class is a JavaScript library for conditional verification.
  * It allows you to create expressions and perform various tests on them.
  * Each validator instance has properties such as `answer`, `value`, and
  * description.
  */
-export default class validator {
+class validator {
     /**
      * @private {any} #value - field that stores the current parameter
      * of the validator instance.
@@ -2351,7 +2379,7 @@ export default class validator {
         error: "red",
     }) {
         if (options.title) {
-            new message()
+            new message_ts_1.default()
                 .bold.underline
                 .setBgColor("rgb(66, 55, 233)")
                 .setColor("rgb(10, 10, 10)")
@@ -2361,13 +2389,13 @@ export default class validator {
         else {
             this
                 .on(true, () => {
-                new message().bold.italic.setColor(options.success)
+                new message_ts_1.default().bold.italic.setColor(options.success)
                     .appendCheckMark
                     .append(" " + this.description)
                     .reset.log();
             })
                 .on(false, () => {
-                new message().bold.italic
+                new message_ts_1.default().bold.italic
                     .setColor(options.error)
                     .appendWarningSign
                     .append(" " + this.description).reset.log();
@@ -2376,3 +2404,4 @@ export default class validator {
         return this;
     }
 }
+exports.default = validator;

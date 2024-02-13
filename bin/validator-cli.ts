@@ -1,13 +1,13 @@
-#!/usr/bin/env node
+#!/usr/bin/env ts-node
 
 import message from "@euriklis/message-ts"
 import fs from "fs";
 import path from "path";
 
 const args = process.argv.slice(2);
-const __dirname = args[0] || "dist/Tests";
+const dirname = args[0] || "dist/Tests";
 
-const testsFolder = path.join(process.cwd(), __dirname);
+const testsFolder = path.join(process.cwd(), dirname);
 // Check if the "Tests" folder exists, otherwise try "tests"
 if (!fs.existsSync(testsFolder)) {
   new message()

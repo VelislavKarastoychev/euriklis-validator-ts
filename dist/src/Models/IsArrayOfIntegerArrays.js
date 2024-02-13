@@ -1,5 +1,7 @@
 "use strict";
-import { IsIntegerArray } from "./IsIntegerArray.js";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsArrayOfIntegerArrays = void 0;
+const IsIntegerArray_1 = require("./IsIntegerArray.js");
 /**
  * Checks if the "value" is an array of integer arrays.
  * Utility function for isArrayOfIntegerArrays method.
@@ -9,20 +11,21 @@ import { IsIntegerArray } from "./IsIntegerArray.js";
  * @returns {boolean} if the "value" is an arrray of
  * integer arrays returns true, otherwise returns false.
  */
-export const IsArrayOfIntegerArrays = (value) => {
+const IsArrayOfIntegerArrays = (value) => {
     const n = value.length;
     let i, j;
     for (i = 0; i < n >> 2; i++) {
         j = i << 2;
-        if (!IsIntegerArray(value[j]) ||
-            !IsIntegerArray(value[j + 1]) ||
-            !IsIntegerArray(value[j + 2]) ||
-            !IsIntegerArray(value[j + 3]))
+        if (!(0, IsIntegerArray_1.IsIntegerArray)(value[j]) ||
+            !(0, IsIntegerArray_1.IsIntegerArray)(value[j + 1]) ||
+            !(0, IsIntegerArray_1.IsIntegerArray)(value[j + 2]) ||
+            !(0, IsIntegerArray_1.IsIntegerArray)(value[j + 3]))
             return false;
     }
     for (j = i << 2; j < n; j++) {
-        if (!IsIntegerArray(value[j]))
+        if (!(0, IsIntegerArray_1.IsIntegerArray)(value[j]))
             return false;
     }
     return true;
 };
+exports.IsArrayOfIntegerArrays = IsArrayOfIntegerArrays;

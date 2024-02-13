@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsObject = void 0;
 /**
  * Implements the isObject method.
  *
@@ -9,6 +11,7 @@
  * because if the "value" parameter is Array or function, this will returns also true value. In this
  * case we have to use a "hack" to detect when the "value" is Object.
  */
-export const IsObject = (value) => {
+const IsObject = (value) => {
     return Object.prototype.toString.call(value) === "[object Object]";
 };
+exports.IsObject = IsObject;

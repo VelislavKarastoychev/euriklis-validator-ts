@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsNumberArray = void 0;
 /**
  * Checks if the value is an array of number elements
  * utility funtion for the isNumberArray method.
@@ -7,7 +9,7 @@
  * @returns {boolean} if the value is number array returns
  * true, otherwise returns false.
  */
-export const IsNumberArray = (value) => {
+const IsNumberArray = (value) => {
     const n = value.length;
     let i, j;
     for (i = 0; i < n >> 2; i++) {
@@ -26,3 +28,4 @@ export const IsNumberArray = (value) => {
     }
     return true;
 };
+exports.IsNumberArray = IsNumberArray;

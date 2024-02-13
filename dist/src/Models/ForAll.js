@@ -1,5 +1,10 @@
 "use strict";
-import validator from "../validator.js";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ForEveryMapEdition = exports.ForEverySetEdition = exports.ForEveryObjectEdition = exports.ForEveryArrayEdition = void 0;
+const validator_1 = __importDefault(require("../validator.js"));
 /**
  * Implementation of the forEvery method when the "value" property of the
  * current validator instance is an array.
@@ -11,9 +16,9 @@ import validator from "../validator.js";
  * @returns {boolean} True if the callback function returns "truthy" validator instances
  * for all elements of the array, false otherwise.
  */
-export const ForEveryArrayEdition = (value, callback) => {
+const ForEveryArrayEdition = (value, callback) => {
     const n = value.length;
-    const v = new validator(undefined);
+    const v = new validator_1.default(undefined);
     let i, j;
     for (i = 0; i < n >> 2; i++) {
         j = i << 2;
@@ -30,6 +35,7 @@ export const ForEveryArrayEdition = (value, callback) => {
     }
     return true;
 };
+exports.ForEveryArrayEdition = ForEveryArrayEdition;
 /**
  * Implements the forEvery method for objects.
  *
@@ -40,9 +46,9 @@ export const ForEveryArrayEdition = (value, callback) => {
  * @returns {boolean} True if the callback function returns "truthy" validator instances
  * for all values of the object, false otherwise.
  */
-export const ForEveryObjectEdition = (value, callback) => {
+const ForEveryObjectEdition = (value, callback) => {
     const keys = Object.keys(value), n = keys.length;
-    const v = new validator(undefined);
+    const v = new validator_1.default(undefined);
     let i, j;
     for (i = 0; i < n >> 2; i++) {
         j = i << 2;
@@ -66,6 +72,7 @@ export const ForEveryObjectEdition = (value, callback) => {
     }
     return true;
 };
+exports.ForEveryObjectEdition = ForEveryObjectEdition;
 /**
  * Implementation of the forEvery method when the "value" property of the
  * current validator instance is a set.
@@ -77,8 +84,8 @@ export const ForEveryObjectEdition = (value, callback) => {
  * @returns {boolean} True if the callback function returns "truthy" validator instances
  * for all elements of the set, false otherwise.
  */
-export const ForEverySetEdition = (value, callback) => {
-    const v = new validator(undefined);
+const ForEverySetEdition = (value, callback) => {
+    const v = new validator_1.default(undefined);
     let index = 0;
     for (const element of value) {
         if (v.reset(), v.value = element, !callback(v, index++).answer) {
@@ -87,6 +94,7 @@ export const ForEverySetEdition = (value, callback) => {
     }
     return true;
 };
+exports.ForEverySetEdition = ForEverySetEdition;
 /**
  * Implementation of the forEvery method when the "value" property of the
  * current validator instance is a map.
@@ -98,11 +106,12 @@ export const ForEverySetEdition = (value, callback) => {
  * @returns {boolean} True if the callback function returns "truthy" validator instances
  * for all values of the map, false otherwise.
  */
-export const ForEveryMapEdition = (map, callback) => {
-    const v = new validator(undefined);
+const ForEveryMapEdition = (map, callback) => {
+    const v = new validator_1.default(undefined);
     for (const [key, value] of map) {
         if (v.reset(), v.value = value, !callback(v, key).answer)
             return false;
     }
     return true;
 };
+exports.ForEveryMapEdition = ForEveryMapEdition;
