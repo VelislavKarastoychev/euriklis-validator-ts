@@ -1,5 +1,3 @@
-#!/usr/bin/env ts-node
-
 import message from "@euriklis/message-ts"
 import fs from "fs";
 import path from "path";
