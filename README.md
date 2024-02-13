@@ -48,10 +48,10 @@ new validator(user)
 
  You can use methods like isInteger, isArray, isNumber, isString, isObject, isUndefined, isEmpty, and more without parentheses. Additionally you may use the operators and, or, and not. For example:
 
-```js
+```ts
 import validator from '@euriklis/validator-ts';
 
-const array = [1, 2, 3, 4, 5, 8, 12];
+const array: number[] = [1, 2, 3, 4, 5, 8, 12];
 
 new validator(array)
     .isIntegerArray
@@ -68,7 +68,7 @@ The most of the methods of the **@euriklis/validator-ts** return a validator ins
 ```ts
 import validator from '@euriklis/validator-ts';
 
-let a = 5, b = 12, c = [11, 13];
+let a:number = 5, b:number = 12, c:number | string[] = [11, 13];
 
 let result = new validator(a)
     .isInteger
