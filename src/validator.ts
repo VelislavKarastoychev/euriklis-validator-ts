@@ -2501,29 +2501,42 @@ export default class validator {
    * @returns {validator} The current validator property.
    */
   test(
-    options: { title: boolean; success: string; error: string } = {
+    options: {
+      title?: boolean;
+      success?: string;
+      error?: string;
+      background?: string;
+      textColor?: string;
+    } = {
       title: false,
-      success: "green",
-      error: "red",
     },
   ): validator {
-    if (options.title) {
+    const {
+      title,
+      success = "green",
+      error = "red",
+      background = "rgb(66,55,233)",
+      textColor = "rgb(10, 10, 10)",
+    } = {
+      ...options,
+    };
+    if (title) {
       new message()
         .bold.underline
-        .setBgColor("rgb(66, 55, 233)")
-        .setColor("rgb(10, 10, 10)")
+        .setColor(textColor)
+        .setBgColor(background)
         .append(this.description)
         .reset.log();
     } else {this
         .on(true, () => {
-          new message().bold.italic.setColor(options.success)
+          new message().bold.italic.setColor(success)
             .appendCheckMark
             .append(" " + this.description)
             .reset.log();
         })
         .on(false, () => {
           new message().bold.italic
-            .setColor(options.error)
+            .setColor(error)
             .appendWarningSign
             .append(" " + this.description).reset.log();
         });}
