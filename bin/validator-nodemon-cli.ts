@@ -1,4 +1,4 @@
-#!/usr/bin/env nodemon
+#!/usr/bin/env ts-node-dev --respawn
 
 import message from "@euriklis/message-ts"
 import fs from "fs";
