@@ -1,4 +1,4 @@
-" use strict";
+"use strict";
 import message from "@euriklis/message-ts";
 import * as errors from "./Errors/index";
 import * as warnings from "./Warnings/index";
