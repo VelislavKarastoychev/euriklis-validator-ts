@@ -2494,9 +2494,11 @@ export default class validator {
    * messages will be printed.
    *
    * @param {{
-   *   title: boolean,
-   *   success: string,
-   *   error: string
+   *   title?: boolean,
+   *   success?: string,
+   *   error?: string,
+   *   background: string,
+   *   textColor: string
    * }} options
    * @returns {validator} The current validator property.
    */
