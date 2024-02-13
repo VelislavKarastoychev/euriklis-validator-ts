@@ -1,6 +1,6 @@
 {
   "name": "@euriklis/validator-ts",
-  "version": "4.2.1",
+  "version": "1.0.0",
   "description": "A javascript package for testing and managing of type coonditions.",
   "main": "./dist/src/validator.js",
   "scripts": {
