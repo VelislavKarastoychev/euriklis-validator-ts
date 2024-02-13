@@ -5,7 +5,7 @@ import fs from "fs";
 import path from "path";
 
 const args = process.argv.slice(2);
-const dirname = args[0] || "dist/Tests";
+const dirname = args[0] || "Tests";
 
 const testsFolder = path.join(process.cwd(), dirname);
 // Check if the "Tests" folder exists, otherwise try "tests"
@@ -23,7 +23,7 @@ if (!fs.existsSync(testsFolder)) {
 
 // Find all test files ending with "spec.js" and run them using Node.js
 fs.readdirSync(testsFolder).forEach((file) => {
-  if (file.endsWith("spec.js")) {
+  if (file.endsWith("spec.ts")) {
     import(path.join(testsFolder, file))
       .catch((err) => {
         new message()
