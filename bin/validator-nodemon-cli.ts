@@ -1,4 +1,4 @@
-#!/usr/bin/env ts-node-dev --respawn
+#!/usr/bin/env ts-node-dev 
 
 import message from "@euriklis/message-ts"
 import fs from "fs";
