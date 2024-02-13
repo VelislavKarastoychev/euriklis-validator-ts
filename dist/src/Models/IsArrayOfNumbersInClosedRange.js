@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IsArrayOfNumbersInClosedRange = void 0;
 /**
  * Checks if the value parameter is an array of numbers in
  * the closed range [a, b].
@@ -11,7 +9,7 @@ exports.IsArrayOfNumbersInClosedRange = void 0;
  * @param {number} b - the upper bound of the elements of the "value" array.
  * @returns {boolean} if the elements of the "value" array are in the closed range [a, b] returns true, otherwise returns false.
  */
-const IsArrayOfNumbersInClosedRange = (value, a, b) => {
+export const IsArrayOfNumbersInClosedRange = (value, a, b) => {
     const n = value.length;
     let i, j;
     for (i = 0; i < n >> 2; i++) {
@@ -35,4 +33,3 @@ const IsArrayOfNumbersInClosedRange = (value, a, b) => {
     }
     return true;
 };
-exports.IsArrayOfNumbersInClosedRange = IsArrayOfNumbersInClosedRange;

@@ -1,4 +1,4 @@
-import { Integer } from "../types";
+import { Integer } from "../types.js";
 /**
  * Tests if the value parameter is is negative number or string which can be transformed to negative number.
  * @param {any | Integer | string} value

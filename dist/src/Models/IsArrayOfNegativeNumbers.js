@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IsArrayOfNegativeNumbers = void 0;
 /**
  * Checks if the "value" is an array of negative numbers.
  * Utility function for the isArrayOfNegetiveNumbers.
@@ -9,7 +7,7 @@ exports.IsArrayOfNegativeNumbers = void 0;
  * @returns {boolean} if the "value" is an array of
  * negative numbers returns true, otherwise returns false.
  */
-const IsArrayOfNegativeNumbers = (value) => {
+export const IsArrayOfNegativeNumbers = (value) => {
     const n = value.length;
     let i, j;
     for (i = 0; i < n >> 2; i++) {
@@ -28,4 +26,3 @@ const IsArrayOfNegativeNumbers = (value) => {
     }
     return true;
 };
-exports.IsArrayOfNegativeNumbers = IsArrayOfNegativeNumbers;

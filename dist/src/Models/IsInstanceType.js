@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IsInstanceType = void 0;
 /**
  * Tests if the parameter is InstanceType.
  *
@@ -18,7 +16,6 @@ exports.IsInstanceType = void 0;
  * }
  * console.log(IsInstanceType(Person)); // true
  */
-const IsInstanceType = (value) => {
+export const IsInstanceType = (value) => {
     return typeof value === "function" && !!value.prototype;
 };
-exports.IsInstanceType = IsInstanceType;

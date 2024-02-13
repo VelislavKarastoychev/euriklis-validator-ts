@@ -1,4 +1,4 @@
-import validator from "../validator";
+import validator from "../validator.js";
 /**
  * Implementation of the forAny method
  * when the "value" property of the current

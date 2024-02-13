@@ -1,4 +1,4 @@
-import { BenchmarkCallback } from "./types";
+import { BenchmarkCallback } from "./types.js";
 /**
  * The `validator` class is a JavaScript library for conditional verification.
  * It allows you to create expressions and perform various tests on them.

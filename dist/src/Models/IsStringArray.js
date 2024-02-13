@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IsStringArray = void 0;
 /**
  * Checks if every element of "value" is a string array.
  * Utility function for the isStringArray method.
@@ -11,7 +9,7 @@ exports.IsStringArray = void 0;
  * string element, then returns true, otherwise return
  * false.
  */
-const IsStringArray = (value) => {
+export const IsStringArray = (value) => {
     const n = value.length;
     let i, j;
     for (i = 0; i < n >> 2; i++) {
@@ -30,4 +28,3 @@ const IsStringArray = (value) => {
     }
     return true;
 };
-exports.IsStringArray = IsStringArray;

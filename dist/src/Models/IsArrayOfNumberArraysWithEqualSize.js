@@ -1,8 +1,6 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IsArrayOfNumberArraysWithEqualSize = void 0;
-const CheckType_1 = require("./CheckType");
-const IsNumberArray_1 = require("./IsNumberArray");
+import { CheckType } from "./CheckType.js";
+import { IsNumberArray } from "./IsNumberArray.js";
 /**
  * Checks if the "value" is a numeric matrix.
  *
@@ -10,25 +8,24 @@ const IsNumberArray_1 = require("./IsNumberArray");
  * @returns {boolean} If the "value" is a numeric matrix
  * returns true, otherwise returns false.
  */
-const IsArrayOfNumberArraysWithEqualSize = (value) => {
+export const IsArrayOfNumberArraysWithEqualSize = (value) => {
     const n = value.length;
     let i, j, l;
-    if (!(0, CheckType_1.CheckType)(value[0], "Array"))
+    if (!CheckType(value[0], "Array"))
         return false;
     else
         l = value[0].length;
     for (i = 0; i < n >> 2; i++) {
         j = i << 2;
-        if (!(0, IsNumberArray_1.IsNumberArray)(value[j]) || value[j].length !== l ||
-            !(0, IsNumberArray_1.IsNumberArray)(value[j + 1]) || value[j + 1].length !== l ||
-            !(0, IsNumberArray_1.IsNumberArray)(value[j + 2]) || value[j + 2].length !== l ||
-            !(0, IsNumberArray_1.IsNumberArray)(value[j + 3]) || value[j + 3].length !== l)
+        if (!IsNumberArray(value[j]) || value[j].length !== l ||
+            !IsNumberArray(value[j + 1]) || value[j + 1].length !== l ||
+            !IsNumberArray(value[j + 2]) || value[j + 2].length !== l ||
+            !IsNumberArray(value[j + 3]) || value[j + 3].length !== l)
             return false;
     }
     for (j = i << 2; j < n; j++) {
-        if (!(0, IsNumberArray_1.IsNumberArray)(value[j]) || value[j].length !== l)
+        if (!IsNumberArray(value[j]) || value[j].length !== l)
             return false;
     }
     return true;
 };
-exports.IsArrayOfNumberArraysWithEqualSize = IsArrayOfNumberArraysWithEqualSize;

@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IsIntegerArray = void 0;
 /**
  * Checks if all the elements of the array are integers.
  * Utility function used in isIntegerArray method.
@@ -9,7 +7,7 @@ exports.IsIntegerArray = void 0;
  * @returns {boolean} if all values are integers, then it will be
  * set to true, otherwise the output will be false.
  */
-const IsIntegerArray = (value) => {
+export const IsIntegerArray = (value) => {
     const n = value.length;
     let i, j;
     for (i = 0; i < n >> 2; i++) {
@@ -26,4 +24,3 @@ const IsIntegerArray = (value) => {
     }
     return true;
 };
-exports.IsIntegerArray = IsIntegerArray;

@@ -1,4 +1,4 @@
-import { TypedArray } from "../types";
+import { TypedArray } from "../types.js";
 /**
  * Checks if the "value" is an array of typed
  * arrays with equal length.

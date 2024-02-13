@@ -1,4 +1,4 @@
-import { Integer } from "../types";
+import { Integer } from "../types.js";
 /**
  * Checks if all the elements of the array are integers.
  * Utility function used in isIntegerArray method.

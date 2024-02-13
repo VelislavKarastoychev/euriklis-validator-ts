@@ -1,4 +1,4 @@
-import { TypedArray } from "../types";
+import { TypedArray } from "../types.js";
 /**
  * Checks if an object has properties typical of TypedArray instances.
  *

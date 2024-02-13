@@ -1,4 +1,4 @@
-import { TypedArray } from "../types";
+import { TypedArray } from "../types.js";
 /**
  * Checks if the "value" property is an array of
  * typed arrays.

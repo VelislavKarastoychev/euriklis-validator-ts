@@ -1,4 +1,4 @@
-import { ComparisonType } from "../types";
+import { ComparisonType } from "../types.js";
 /**
  * This utility function allows you to test a value against a given condition
  * (e.g., equality, less than, greater than, etc.). You can optionally specify

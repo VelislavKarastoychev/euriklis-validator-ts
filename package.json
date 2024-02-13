@@ -3,13 +3,14 @@
   "version": "4.2.1",
   "description": "A javascript package for testing and managing of type coonditions.",
   "main": "./dist/src/validator.js",
+  "type": "module",
   "scripts": {
     "start": "ts-node ./src/validator.ts",
-    "build:validator": "tsc",
-    "test": "ts-node ./bin/validator-cli.ts"
+    "build:validator": "tsc && tsc-alias",
+    "test": "rm -rdf dist && tsc && tsc-alias && ts-node ./dist/bin/validator-cli.js && rm -rdf dist/Tests"
   },
   "bin": {
-    "validator": "bin/validator-cli.ts"
+    "validator": "rm -rdf dist && tsc && tsc-alias && dist/bin/validator-cli.js && rm -rdf dist/Tests"
   },
   "keywords": [
     "validator",
@@ -24,11 +25,12 @@
   "author": "Euriklis <euriklis@hotmail.com>",
   "homepage": "https://github.com/VelislavKarastoychev/euriklis-validator#readme",
   "dependencies": {
-    "@euriklis/message-ts": "^1.0.4",
+    "@euriklis/message-ts": "^2.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@types/node": "^20.11.16"
+    "@types/node": "^20.11.16",
+    "tsc-alias": "^1.8.8"
   }
 }

@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IsArrayOfNumbersInRange = void 0;
 /**
  * Checks if the "value" is an array of numbers in some open range (a, b).
  * Utility function for the isArrayOfNumbersInRange method.
@@ -10,7 +8,7 @@ exports.IsArrayOfNumbersInRange = void 0;
  * @param {number} b - the upper bound of the "value" elements in the array.
  * @returns {boolean} if all the elements are numbers in the open interval (a, b) returns true, otherwise returns false.
  */
-const IsArrayOfNumbersInRange = (value, a, b) => {
+export const IsArrayOfNumbersInRange = (value, a, b) => {
     const n = value.length;
     let i, j;
     for (i = 0; i < n >> 2; i++) {
@@ -34,4 +32,3 @@ const IsArrayOfNumbersInRange = (value, a, b) => {
     }
     return true;
 };
-exports.IsArrayOfNumbersInRange = IsArrayOfNumbersInRange;

@@ -1,4 +1,4 @@
-import { Integer } from "../types";
+import { Integer } from "../types.js";
 /**
  * Implements the isArrayOfIntegerArraysWithEqualSize.
  *

@@ -1,4 +1,4 @@
-import { Integer } from "../types";
+import { Integer } from "../types.js";
 /**
  * Checks if the value is an array of negative integers.
  * Utility function for the isArrayOfNegativeIntegers method.

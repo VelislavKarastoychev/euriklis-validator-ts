@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TestCondition = void 0;
 /**
  * This utility function allows you to test a value against a given condition
  * (e.g., equality, less than, greater than, etc.). You can optionally specify
@@ -24,7 +22,7 @@ exports.TestCondition = void 0;
  * // Test if 'value.property' is greater than or equal to 10
  * const result = TestCondition(value, "property", "geq", 10);
  */
-const TestCondition = (value, property = "", item, condition = "eq") => {
+export const TestCondition = (value, property = "", item, condition = "eq") => {
     let v = value;
     if (property) {
         v = value[property];
@@ -44,4 +42,3 @@ const TestCondition = (value, property = "", item, condition = "eq") => {
             return v > item;
     }
 };
-exports.TestCondition = TestCondition;

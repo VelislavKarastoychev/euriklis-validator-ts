@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.IsArrayOfPositiveNumbers = void 0;
 /**
  * Checks if the value is positive numeric array.
  * Utility funciont for isArrayOfPositiveNumbers.
@@ -9,7 +7,7 @@ exports.IsArrayOfPositiveNumbers = void 0;
  * @returns {boolean} if the "value" is numeric array
  * with positive elements,returns true, otherwise returns false.
  */
-const IsArrayOfPositiveNumbers = (value) => {
+export const IsArrayOfPositiveNumbers = (value) => {
     const n = value.length;
     let i, j;
     for (i = 0; i < n >> 2; i++) {
@@ -28,4 +26,3 @@ const IsArrayOfPositiveNumbers = (value) => {
     }
     return true;
 };
-exports.IsArrayOfPositiveNumbers = IsArrayOfPositiveNumbers;

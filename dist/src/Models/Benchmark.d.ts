@@ -1,4 +1,4 @@
-import { BenchmarkCallback } from "../types";
+import { BenchmarkCallback } from "../types.js";
 /**
  * @callback {BenchmarkCallback}
  * @param {any} parameters

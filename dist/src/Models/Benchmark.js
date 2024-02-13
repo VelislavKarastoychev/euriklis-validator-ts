@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Benchmark = void 0;
 /**
  * @callback {BenchmarkCallback}
  * @param {any} parameters
@@ -20,7 +18,7 @@ exports.Benchmark = void 0;
  * @returns {mean: number, std: number, iterations: number} an object with properties mean,
  * std and iterations.
  */
-const Benchmark = (params, f, iterations) => {
+export const Benchmark = (params, f, iterations) => {
     let i, dt1, dt2, times = [];
     for (i = iterations; i--;) {
         dt1 = performance.now();
@@ -38,4 +36,3 @@ const Benchmark = (params, f, iterations) => {
     const std = Math.sqrt(dispersion / (iterations - 1));
     return { mean, std, iterations };
 };
-exports.Benchmark = Benchmark;

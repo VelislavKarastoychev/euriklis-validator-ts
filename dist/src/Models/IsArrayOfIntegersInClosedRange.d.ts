@@ -1,4 +1,4 @@
-import { Integer } from "../types";
+import { Integer } from "../types.js";
 /**
  * Checks if the "value" property is an array of integers, which lies
  * in the closed interval [a, b].
