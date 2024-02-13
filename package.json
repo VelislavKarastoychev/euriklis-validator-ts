@@ -9,7 +9,8 @@
     "test": "./bin/validator-cli.ts"
   },
   "bin": {
-    "validator": "bin/validator-cli.ts"
+    "validator": "bin/validator-cli.ts",
+    "euriklis-validator": "bin/validator-nodemon-cli.ts"
   },
   "keywords": [
     "validator",
