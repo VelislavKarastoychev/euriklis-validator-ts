@@ -1,4 +1,4 @@
-#!/usr/bin/env ts-node
+#!/usr/bin/env nodemon
 
 import message from "@euriklis/message-ts"
 import fs from "fs";
