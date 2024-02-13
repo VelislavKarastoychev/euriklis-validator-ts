@@ -1,4 +1,4 @@
-#!/usr/bin/env ts-node-dev 
+#!/usr/bin/env ts-node --watch
 
 import message from "@euriklis/message-ts"
 import fs from "fs";
