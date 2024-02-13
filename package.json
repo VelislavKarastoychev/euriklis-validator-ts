@@ -1,7 +1,7 @@
 {
   "name": "@euriklis/validator-ts",
   "version": "1.0.0",
-  "description": "A javascript package for testing and managing of type coonditions.",
+  "description": "A typescript package for testing and managing of type coonditions.",
   "main": "./dist/src/validator.js",
   "scripts": {
     "start": "ts-node ./src/validator.ts",
@@ -14,6 +14,7 @@
   "keywords": [
     "validator",
     "javascript",
+    "typescript",
     "\"type",
     "verification\"",
     "\"conditional",
